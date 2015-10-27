@@ -2,7 +2,7 @@ install = node['remote_syslog2']['install']
 bin_file = "#{install['bin_path']}/#{install['bin']}"
 
 cookbook_file "remote_syslog_linux_386.tar.gz" do
-  path "/tmp/remote_syslog_linux_386.tar.gz"
+  path "/tmp/remote_syslog.tar.gz"
   action :create_if_missing
 end
 
