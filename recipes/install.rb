@@ -21,7 +21,6 @@ bash 'extract remote_syslog2' do
     mv -f #{install['extracted_path']}/#{install['extracted_bin']} #{bin_file}
     rm -rf #{install['download_path']} #{install['extracted_path']}
   EOH
-  not_if { ::File.exists?(bin_file) }
 end
 
 file bin_file do
