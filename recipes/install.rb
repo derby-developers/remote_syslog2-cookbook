@@ -1,6 +1,13 @@
 install = node['remote_syslog2']['install']
 bin_file = "#{install['bin_path']}/#{install['bin']}"
 
+install['old_bins'].each do |old_bin_file|
+  file "#{install['bin_path']}/#{old_bin_file}" do
+    action :delete
+    notifies :stop, 'service[remote_syslog2]', :immediately
+  end
+end
+
 cookbook_file "remote_syslog_linux_i386.tar.gz" do
   path "/tmp/remote_syslog.tar.gz"
   action :create_if_missing
