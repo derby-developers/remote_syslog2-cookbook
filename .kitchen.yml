@@ -13,7 +13,3 @@ suites:
     run_list:
       - recipe[remote_syslog2]
     attributes:
-      remote_syslog2:
-        config:
-          destination:
-            port: "123"
