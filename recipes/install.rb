@@ -10,7 +10,7 @@ end
 
 cookbook_file "remote_syslog_linux_i386.tar.gz" do
   path "/tmp/remote_syslog.tar.gz"
-  action :create_if_missing
+  action :create
 end
 
 bash 'extract remote_syslog2' do
