@@ -8,7 +8,7 @@ install['old_bins'].each do |old_bin_file|
   end
 end
 
-cookbook_file "remote_syslog_linux_i386.tar.gz" do
+cookbook_file "remote_syslog_linux_amd64.tar.gz" do
   path "/tmp/remote_syslog.tar.gz"
   action :create
 end
